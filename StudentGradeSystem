@@ -1,0 +1,47 @@
+package com.company;
+import java.util.Scanner;
+// Student Management System
+public class Task3 {
+    public static void main(String args[]) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the student name:");
+            String name = sc.nextLine();
+            System.out.println("Enter the following 4 subject marks which obtained from 100 marks:-");
+            System.out.println("Enter the Physics marks:");
+            int physics = sc.nextInt();
+            System.out.println("Enter the Chemistry marks:");
+            int chemistry = sc.nextInt();
+            System.out.println("Enter the Biology marks:");
+            int biology = sc.nextInt();
+            System.out.println("Enter the Mathematics marks:");
+            int math = sc.nextInt();
+
+            int totalMarks = physics + chemistry + math + biology;
+            if (physics < 100 && chemistry < 100 && math < 100 && biology <100){
+                System.out.println("Student totalmarks are:" + totalMarks);
+                float percentage = (100f * totalMarks) / 400f;
+                System.out.println(" Student percentage is:" + percentage);
+                if(percentage >= 90){
+                    System.out.println(" pass with the grade O.");
+                }
+                else if(percentage < 90 && percentage >= 80){
+                    System.out.println(" pass with the grade A+.");
+                }
+                else if(percentage >= 65 && percentage < 80){
+                    System.out.println("you pass with the grade B.");
+                }
+                else if(percentage >= 50 && percentage < 65){
+                    System.out.println("you pass with the grade C.");
+                }
+                else if(percentage >= 40 && percentage < 50){
+                    System.out.println("you pass with the grade D.");
+                }
+                else{
+                    System.out.println("You are fail !!");
+                }
+            }
+            else{                System.out.println("Enter the valid marks..");
+            }
+
+        }
+    }
